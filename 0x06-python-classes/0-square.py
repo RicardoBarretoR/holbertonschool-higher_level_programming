@@ -4,4 +4,4 @@
 
 class Square:
 
-    pass  # An empty block
+    pass
