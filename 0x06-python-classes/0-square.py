@@ -3,5 +3,5 @@
 
 
 class Square:
-
+    """operation null"""
     pass
