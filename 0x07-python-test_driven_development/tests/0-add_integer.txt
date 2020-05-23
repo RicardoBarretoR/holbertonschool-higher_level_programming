@@ -73,3 +73,7 @@ none arguments:
     Traceback (most recent call last):
             ...
     TypeError: a must be an integer
+
+optional argument:
+    >>> add_integer(2)
+    100
