@@ -1,0 +1,55 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+import module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+two integers:
+    >>> add_integer(5, 10)
+    15
+
+two floats:
+    >>> add_integer(2.5, 2.5)
+    4
+
+a is a float:
+    >>> add_integer(4.5, 3)
+    7
+
+b is a float:
+    >>> add_integer(3, 4.5)
+    7
+
+a is a string:
+    >>> add_integer('str', 6)
+    Traceback (most recent call last):
+            ...
+    TypeError: a must be an integer
+
+
+b is a string:
+    >>> add_integer(6, 'str')
+    Traceback (most recent call last):
+            ...
+    TypeError: b must be an integer
+
+two negative numbers:
+    >>> add_integer(-2, -4)
+    -6
+
+a is negative number:
+    >>> add_integer(-2, 4)
+    2
+
+big numbers:
+    >>> add_integer(30000000000, 20000000000)
+    50000000000
+
+
+more than two arguments:
+    >>> add_integer(1, 2, 3)
+    Traceback (most recent call last):
+            ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
