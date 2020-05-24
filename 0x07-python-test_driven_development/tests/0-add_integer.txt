@@ -43,9 +43,6 @@ a is negative number:
     >>> add_integer(-2, 4)
     2
 
-big numbers:
-    >>> add_integer(30000000000, 20000000000)
-    50000000000
 
 nothing arguments:
     >>> add_integer()
@@ -78,7 +75,15 @@ optional argument:
     100
 
 a is NaN:
-    >>> add_integer(float('NaN'), 5)
+    >>> add_integer(float('NaN'))
     Traceback (most recent call last):
             ...
     ValueError: cannot covert float NaN to integer
+
+a is inf:
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+            ...
+    OverflowError: cannot convert float infinity to integer
+
+
