@@ -1,8 +1,15 @@
 #!/usr/bin/python3
+"""
+This is the "Add integer" module.
+
+The module supplies one function, add_integer(),
+which adds together 2 int or float types and returns an int.
+
+"""
 
 
 def add_integer(a, b=98):
-    """function that adds 2 integers"""
+    '''function that adds 2 integers'''
 
     if type(a) is not int and type(a) is not float:
         raise TypeError('a must be an integer')
