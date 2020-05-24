@@ -22,6 +22,14 @@ b is a float:
     >>> add_integer(3, 4.5)
     7
 
+a is a negative float:
+    >>> add_integer(-4.3, 3)
+    -1
+
+float negative 0.:
+    >>> add_integer(-0.2, 6)
+    6
+
 a is a string:
     >>> add_integer('str', 6)
     Traceback (most recent call last):
@@ -58,11 +66,12 @@ more than two arguments:
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 booleans arguments:
-    >>> add_integer(True, 22)
+    >>> add_integer(22, True)
     23
 
-    >>> add_integer(False, True)
-    1
+booleans arguments:
+    >>> add_integer(11, False)
+    11
 
 none arguments:
     >>> add_integer(None, None)
