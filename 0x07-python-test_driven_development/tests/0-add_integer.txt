@@ -26,9 +26,6 @@ a is a negative float:
     >>> add_integer(-4.3, 3)
     -1
 
-float negative 0.:
-    >>> add_integer(-0.2, 6)
-    6
 
 a is a string:
     >>> add_integer('str', 6)
@@ -37,27 +34,9 @@ a is a string:
     TypeError: a must be an integer
 
 
-b is a string:
-    >>> add_integer(6, 'str')
-    Traceback (most recent call last):
-            ...
-    TypeError: b must be an integer
-
-two negative numbers:
-    >>> add_integer(-2, -4)
-    -6
-
-a is negative number:
-    >>> add_integer(-2, 4)
-    2
-
-
 nothing arguments:
-    >>> add_integer()
-    Traceback (most recent call last):
-            ...
-    TypeError: add_integer() missing 2 required positional argument: 'a' and 'b'
-
+    >>> add_integer(0)
+    98
 
 more than two arguments:
     >>> add_integer(1, 2, 3)
@@ -65,21 +44,14 @@ more than two arguments:
             ...
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
-booleans arguments:
-    >>> add_integer(22, True)
-    23
-
-booleans arguments:
-    >>> add_integer(11, False)
-    11
 
 none arguments:
-    >>> add_integer(None, None)
+    >>> add_integer(None)
     Traceback (most recent call last):
             ...
     TypeError: a must be an integer
 
-optional argument:
+a as only argument:
     >>> add_integer(2)
     100
 
@@ -87,12 +59,10 @@ a is NaN:
     >>> add_integer(float('NaN'))
     Traceback (most recent call last):
             ...
-    ValueError: cannot covert float NaN to integer
+    ValueError: cannot convert float NaN to integer
 
 a is inf:
     >>> add_integer(float('inf'))
     Traceback (most recent call last):
             ...
     OverflowError: cannot convert float infinity to integer
-
-
