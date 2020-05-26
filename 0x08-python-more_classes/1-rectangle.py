@@ -6,8 +6,9 @@ class Rectangle:
     """passing initial values to object"""
     def __init__(self, width=0, height=0):
 
-        self.__height = height
-        self.__width = width
+        'declaration of atrributes'
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
