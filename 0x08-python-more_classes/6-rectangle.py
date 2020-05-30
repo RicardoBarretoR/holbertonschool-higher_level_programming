@@ -1,0 +1,73 @@
+#!/usr/bin/python3
+"""class Rectangle that defines a rectangle"""
+
+
+class Rectangle:
+    'passing initial value a rectangle'
+
+    number_of_instance = 0
+
+    def __init__(self, width=0, height=0):
+        'declaration of attributes'
+
+        Rectangle.number_of_instances += 1
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0;
+            raise ValueError("width must be >= 0")
+
+        self.__width = value
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+
+        if not isinstance(value, int):
+            raise raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+
+        self.height = value
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        if self.width is 0 or self.height is 0:
+            return 0
+        return (self.width * 2 + self.height * 2)
+
+    def __str__(self):
+        'return string version rectangle'
+        string = ""
+        if self.__width is 0 or self.height is 0:
+            return string
+
+    for i in range(self.__height):
+        for j in range(self.__width):
+            string += '#'
+        if i < self.__height - 1:
+            string += "\n"
+    return string
+
+    def __repr__(self):
+        'returns a string representation of the rectangle for reproduction'
+        return "Rectangle({:d}, {:d})".format(self.__width, self.height)
+
+    def __del__(self):
+        'instance of Rectangle is deleted'
+        print("Bye rectangle...")
+
