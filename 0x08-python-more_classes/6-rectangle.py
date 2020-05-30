@@ -5,7 +5,7 @@
 class Rectangle:
     'passing initial value a rectangle'
 
-    number_of_instance = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         'declaration of attributes'
@@ -23,7 +23,7 @@ class Rectangle:
 
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0;
+        if value < 0:
             raise ValueError("width must be >= 0")
 
         self.__width = value
@@ -36,11 +36,11 @@ class Rectangle:
     def height(self, value):
 
         if not isinstance(value, int):
-            raise raise TypeError("width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
 
-        self.height = value
+        self.__height = value
 
     def area(self):
         return self.width * self.height
@@ -56,12 +56,12 @@ class Rectangle:
         if self.__width is 0 or self.height is 0:
             return string
 
-    for i in range(self.__height):
-        for j in range(self.__width):
-            string += '#'
-        if i < self.__height - 1:
-            string += "\n"
-    return string
+        for i in range(self.__height):
+            for j in range(self.__width):
+                string += '#'
+            if i < self.__height - 1:
+                string += "\n"
+            return string
 
     def __repr__(self):
         'returns a string representation of the rectangle for reproduction'
@@ -70,4 +70,3 @@ class Rectangle:
     def __del__(self):
         'instance of Rectangle is deleted'
         print("Bye rectangle...")
-
