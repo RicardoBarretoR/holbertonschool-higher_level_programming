@@ -41,6 +41,16 @@ one word:
          >>> text_indentation("hello")
          hello
 
+siggn various:
+	>>> test_indentation("hello.how?are:you")
+	hello.
+	<BLANKLINE>
+	how?
+	<BLANKLINE>
+	are:
+	<BLANKLINE>
+	you
+
 no argument:
 	 >>> text_indentation()
          Traceback (most recent call last):
