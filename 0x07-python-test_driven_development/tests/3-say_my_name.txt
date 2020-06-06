@@ -49,4 +49,4 @@ neither are strings:
          >>> say_my_name(12, 12)
          Traceback (most recent call last):
                    ...
-         TypeError: first_name must be a stringThe ``3-say_my_name`` module
+         TypeError: first_name must be a string
