@@ -82,12 +82,18 @@ class Rectangle(Base):
 
     def display(self):
         'prints in stdout the Rectangle instance with char #'
+        for colum in range(self.y):
+            print()
+
         for i in range(self.height):
+            for row in range(self.x):
+                print(' ', end='')
+
             for j in range(self.width):
                 print('#',  end='')
             print()
 
     def __str__(self):
-        'return string'
+        'redefine the method and return the string'
         return ("[{}] ({}) {}/{} - {}/{}".format(__class__.__name__,
                 self.id, self.x, self.y, self.width, self.height))
