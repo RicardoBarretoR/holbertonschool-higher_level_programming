@@ -5,8 +5,6 @@ all your future classes and to avoid duplicating the same code
 
 """
 import json
-"""from rectangle import Rectangle
-"""
 
 
 class Base:
@@ -28,13 +26,14 @@ class Base:
             return'[]'
         return json.dumps(list_dictionaries)
 
-    """"
+    @classmethod
     def save_to_file(cls, list_objs):
         list_dictionaries = []
         if list_objs is None:
             list_objs = []
         for obj in list_objs:
-            list_dictionaries.append(obj.to_dictionariy())
-        json_string = cls.to_json_string(list_dictionaries)
-        filename = cls_to_str
-    """
+            list_dictionaries.append(obj.to_dictionary())
+        json_string = Base.to_json_string(list_dictionaries)
+        with open("{}.json".format(cls.__name__), mode='w', encoding='UTF-8')\
+                as f:
+            f.write(json_string)
