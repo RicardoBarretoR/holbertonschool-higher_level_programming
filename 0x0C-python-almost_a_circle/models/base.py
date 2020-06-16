@@ -59,7 +59,7 @@ class Base:
         new_list = []
 
         try:
-            with open(filename, 'r') as f:
+            with open(filename, 'r', encoding='UTF-8') as f:
                 new_list = cls.from_json_string(f.read())
             for i, j in enumerate(new_list):
                 new_list[i] = cls.create(**new_list[i])
