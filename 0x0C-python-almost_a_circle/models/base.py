@@ -37,3 +37,9 @@ class Base:
         with open("{}.json".format(cls.__name__), mode='w', encoding='UTF-8')\
                 as f:
             f.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return []
+        return json.loads(json_string)
