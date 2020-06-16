@@ -55,8 +55,9 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        new_list = []
         filename = cls.__name__ + ".json"
+        new_list = []
+
         try:
             with open(filename, 'r') as f:
                 new_list = cls.from_json_string(f.read())
