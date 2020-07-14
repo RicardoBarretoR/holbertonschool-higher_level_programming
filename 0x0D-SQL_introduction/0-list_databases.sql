@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-show databases
+-- script that lists all databases.
+SHOW DATABASES;
