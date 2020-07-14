@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 -- script that displays the number of records
-SELECT COUNT(*) FROM first_table;
-  
+SELECT COUNT(id=89) FROM first_table;
