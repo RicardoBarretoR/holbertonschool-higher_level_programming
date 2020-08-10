@@ -13,8 +13,10 @@ if __name__ == "__main__":
                          passwd=password, db=basedata)
     """create a cursor by executing the 'cursor' function of database"""
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY %s \
-                ORDER BY states.id ASC", (state,))
+    # cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY %s \
+    #            ORDER BY states.id ASC", (state,))
+    cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY '{}' \
+                ORDER BY states.id ASC".format(state))
     rows = cur.fetchall()
     for row in rows:
         print(row)
