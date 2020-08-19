@@ -1,3 +1,3 @@
 #!/bin/bash
 #Take a URL and show all the HTTP methods
-curl -sL "$1" | grep "Allow" | cut -d " " -f 2-
+curl -sI $1 | grep Allow | cut -f2- -d' '
