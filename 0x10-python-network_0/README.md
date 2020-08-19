@@ -54,7 +54,9 @@ What you should learn from this project:
 
 * What happens when you type google.com in your browser (Application level)
 
----                                                                                                                                                   ### [0. cURL body size](./0-body_size.sh)
+---
+
+### [0. cURL body size](./0-body_size.sh)
 * Write a Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
 
 ### [1. cURL to the end](./1-body.sh)
