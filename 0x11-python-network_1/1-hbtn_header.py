@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 sends a request to the URL and Show
 the value of x-Request-Id variable
 
