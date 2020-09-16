@@ -1,5 +1,4 @@
 #!/usr/bin/node
-const lenguages = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-for (i = 0; i < lenguages.length; i++) {
-  console.log(lenguages[i]);
-}
+console.log('C is fun');
+console.log('Python is cool');
+console.log('Javascript is amazing');
